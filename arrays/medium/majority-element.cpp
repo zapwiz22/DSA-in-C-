@@ -3,7 +3,7 @@
 using namespace std;
 
 /* 169. Majority Element leetcode problem solution */
-/* solution using moore's algorithm */
+/* solution using moore's voting algorithm */
 /* O (n) */
 class Solution {
    public:
