@@ -26,21 +26,18 @@ struct Node {
 };
 
 Node* ceil(Node* root,int val) {
+	Node* res = root;
+	Node* ans = NULL;
 	int diff = INT_MAX;
-	Node* res = NULL;
-	queue<Node*> q;
-	q.push(root);
-	while (!q.empty()) {
-		Node* curr = q.front();
-		q.pop();
-		if (abs(val-curr->data)<diff && curr->data<=val) {
-			res = curr;
-			diff = abs(val-curr->data);
+	while (res!=NULL) {
+		if (res->data==val) return res;
+		if (res->data>val) res = res->left;
+		else {
+			ans = res;
+			res = res->right;
 		}
-		if (curr->left) q.push(curr->left);
-		if (curr->right) q.push(curr->right);
 	}
-	return res;
+	return ans;
 }
 
 int main() {
