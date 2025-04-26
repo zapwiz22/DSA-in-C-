@@ -21,13 +21,12 @@ void bfs(vector<vector<int>> &graph, vector<bool> &vis, int start) {
             }
             cout << endl;
             continue;
-        } else {
-            cout << curr << " ";
-            for (auto &neigh : graph[curr]) {
-                if (!vis[neigh]) {
-                    q.push(neigh);
-                    vis[neigh] = true;
-                }
+        }
+        cout << curr << " ";
+        for (auto &neigh : graph[curr]) {
+            if (!vis[neigh]) {
+                q.push(neigh);
+                vis[neigh] = true;
             }
         }
     }
