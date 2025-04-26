@@ -5,8 +5,9 @@
 using namespace std;
 
 /** dijktra's algorithm to find the shortest distance to a node from the source node
- * time complexity: O(E logV) since all edges are traversed and push and pop is of log time
+ * time complexity: O(E logV) since all edges are traversed and push and pop is of logV time (V since while using set only at max V number of pairs will be there in the set)
  * space complexity: O(E + V) since priority queue stores the number of edges nodes are stored in the res vector
+ * only used if no negative weights in this and this is a greedy approach
  */
 class Solution {
    public:
