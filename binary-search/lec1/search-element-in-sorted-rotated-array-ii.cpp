@@ -5,6 +5,7 @@ using namespace std;
 /** only difference is that this vector can contain duplicates too
  * to deal the edge case in this where the low and high value are equal to the mid and not the target
  * we simply reduce the search space by those two postitions
+ * T.C. :- O(logn) but worst is O(n/2) if (all elements are equal and not the target)
  */
 int searchElement(vector<int> &vec, int target) {
     int low = 0, high = vec.size() - 1, mid;
