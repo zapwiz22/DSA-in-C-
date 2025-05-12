@@ -1,9 +1,9 @@
-#include <iostream>
 #include <cmath>
+#include <iostream>
 using namespace std;
 
 void printPrimes(int n) {
-    for (int i = 2; i <= (int)sqrt(n); i++) {
+    for (int i = 2; i < (int)sqrt(n); i++) {
         if (n % i == 0) {
             cout << i << " ";
             while (n % i == 0) {
@@ -11,7 +11,7 @@ void printPrimes(int n) {
             }
         }
     }
-    if (n>1) cout << n;
+    if (n > 1) cout << n;
     cout << endl;
     return;
 }
