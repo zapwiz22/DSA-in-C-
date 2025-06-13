@@ -19,3 +19,10 @@ public:
     return dp[amount];
   }
 };
+
+/** important note
+ * when using int or long long the any  value greater than the max value of that
+ * type like INT_MAX or LLONG_MAX is undefined behaviour but unsigned int or
+ * unsigned long long runs in loop so INT_MAX + 1 = 0 and so on for the long
+ * long one too so this is undefined
+ */
