@@ -9,12 +9,14 @@ int func(int index, int target, vector<int> &arr) {
   if (index == 0) {
     return arr[0] == target;
   }
+  if (dp[index][target] != -1)
+    return dp[index][target];
   int notTaken = func(index - 1, target, arr);
   int taken = 0;
   if (arr[index] <= target) {
     taken = func(index - 1, target - arr[index], arr);
   }
-  return taken + notTaken;
+  return dp[index][target] = taken + notTaken;
 }
 
 int findWays(vector<int> &arr, int k) {
