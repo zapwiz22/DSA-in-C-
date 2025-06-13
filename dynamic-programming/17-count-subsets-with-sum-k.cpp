@@ -21,7 +21,7 @@ int func(int index, int target, vector<int> &arr) {
 
 int findWays(vector<int> &arr, int k) {
   int n = arr.size();
-  dp = vector<vector<int>>(n, vector<int>(k + 1, 0));
+  dp = vector<vector<int>>(n, vector<int>(k + 1, -1));
   return func(n - 1, k, arr);
 }
 
